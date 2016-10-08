@@ -2,8 +2,8 @@ FROM pluie/alpine-apache
 
 MAINTAINER Lei Wang https://github.com/bonnlei
 
-ADD ./install.d/20-extensions.sh /scripts/install.d
-ADD ./pre-init.d/20-extensions.sh /scripts/pre-init.d
+ADD ./install.d/35-extensions.sh /scripts/install.d
+ADD ./pre-init.d/35-extensions.sh /scripts/pre-init.d
 
 
 ENV      SHENV_NAME=Apache \
