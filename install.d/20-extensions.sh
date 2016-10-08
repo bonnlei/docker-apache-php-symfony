@@ -34,6 +34,8 @@ apk -U add php5-iconv php5-intl php5-posix openrc sshd subversion
 curl -LsS https://symfony.com/installer -o /usr/bin/symfony
 chmod +x /usr/bin/symfony
 
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+
 apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
 rc-update add sshd
 wget https://phar.phpunit.de/phpunit-old.phar
