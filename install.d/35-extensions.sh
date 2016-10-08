@@ -28,6 +28,7 @@ pecl_install zend_extension xdebug 2.3.3 --enable-xdebug
 # Cleanup
 rm -rf /tmp/*
 apk del autoconf php5-dev zlib-dev pcre-dev alpine-sdk
+rm -rf /var/cache/apk/*
 
 apk -U add php5-iconv php5-intl php5-posix openrc openssh subversion
 curl -LsS https://symfony.com/installer -o /usr/bin/symfony
@@ -35,9 +36,8 @@ chmod +x /usr/bin/symfony
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
 
-apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
-rc-update add sshd
-
-# wget http://phar.phpunit.de/phpunit-old.phar
+# apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
+# rc-update add sshd
+# wget https://phar.phpunit.de/phpunit-old.phar
 # chmod +x phpunit-old.phar
 # mv phpunit-old.phar /usr/local/bin/phpunit
