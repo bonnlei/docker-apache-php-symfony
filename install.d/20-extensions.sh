@@ -30,7 +30,7 @@ rm -rf /tmp/*
 apk del autoconf php5-dev zlib-dev pcre-dev alpine-sdk
 rm -rf /var/cache/apk/*
 
-apk -U add php5-iconv php5-intl php5-posix openrc sshd
+apk -U add php5-iconv php5-intl php5-posix openrc sshd subversion
 curl -LsS https://symfony.com/installer -o /usr/bin/symfony
 chmod +x /usr/bin/symfony
 
